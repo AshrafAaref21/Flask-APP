@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+  <div align='center'>
+    <h1 >Welcome to the page for {{current_user.user_name}}</h1>
+    <img align='center' src="{{profile_image}}">
+    <p>{{ current_user.email }}</p>
+  </div>
+</div>
+<div class="container">
+  <form  method="POST" action = "" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.user_name.label(class_="form-group") }}
+      {{form.user_name(class_='form-control')  }}
+    </div
+    <div class="form-group">
+      {{ form.email.label(class_="form-group") }}
+      {{form.email(class_='form-control')  }}
+    </div>
+    <div class="form-group">
+      {{ form.picture.label(class_="form-group") }}
+      {{ form.picture(class_="form-control-file") }}
+    </div>
+    <div class="form-group">
+        {{ form.submit(class_="btn btn-primary") }}
+    </div>
+  </form>
+
+</div>
+
+{% endblock content %}
