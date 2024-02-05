@@ -16,6 +16,8 @@ It's a project to create company blog with all advanced Flask APIs.
 
 **User Authentication & Login**
 
+**BluePrints**
+
 **Update Delete Create**
 ## Related
 
